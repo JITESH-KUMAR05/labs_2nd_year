@@ -21,12 +21,12 @@
 def fact(n):
     fac = 1
     if n==1 or n==0:
-        print(1)
+        pass
     else:
-        fac = n*fact(n-1)
-        print("The factorial is",fac )
+        fac = n * fact((n-1))
+    print("The factorial is",fac )
     
-num = int(input("Enter a number : "))
+num = eval(input("Enter a number : "))
 if(num<0):
     print("Sorry, factorial does not exist for negative numbers")
 else:
