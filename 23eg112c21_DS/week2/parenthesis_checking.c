@@ -56,24 +56,24 @@ int ismatching_pair(char char1, char char2)
 int isbalanced(char *text)
 {
     int i;
-    for (i = 0; i<strlen(text) ; i++)
+    for (i = 0; i < strlen(text); i++)
     {
         if (text[i] == '(' || text[i] == '{' || text[i] == '[')
             push(text[i]);
-   
-    else if (text[i] == ')' || text[i] == '}' || text[i] == ']')
-    {
-        if (top == -1)
+
+        else if (text[i] == ')' || text[i] == '}' || text[i] == ']')
         {
-            return 0;
+            if (top == -1)
+            {
+                return 0;
+            }
+            else if (!ismatching_pair(pop(), text[i]))
+            {
+                return 0;
+            }
         }
-        else if (!ismatching_pair(pop(), text[i]))
-        {
-            return 0;
-        }
+        return (top == -1);
     }
-    return (top == -1);
-}
 }
 
 int main()
