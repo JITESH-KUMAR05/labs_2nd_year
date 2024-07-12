@@ -72,8 +72,8 @@ int isbalanced(char *text)
                 return 0;
             }
         }
-        return (top == -1);
     }
+    return (top == -1);
 }
 
 int main()

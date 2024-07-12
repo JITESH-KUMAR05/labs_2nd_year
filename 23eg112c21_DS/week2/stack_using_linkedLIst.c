@@ -29,12 +29,10 @@ int main(){
 //			case 2:
 //				pop();
 //				break;
-//			case 3:
-//				display();
-//				break;
-//			case 4:
-//				peek();
-//				break;
+			case 3:
+				display();
+				break;
+			
 			case 5:
 				exit(0);
 				break;
@@ -90,7 +88,7 @@ void pop(){
 	else{
 		temp = top;
 		top = temp->next;
-		printf("Deleted\n")
+		printf("Deleted\n");
 	}
 }
 
