@@ -48,7 +48,6 @@ def check_balance():
             print(f"your current balance is {user["balance"]}")
         else:
             print("invalid acc number")
-        
 
 def display_menu():
     print("1. Create account")
