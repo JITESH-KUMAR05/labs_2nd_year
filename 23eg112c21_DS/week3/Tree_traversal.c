@@ -82,7 +82,7 @@ void inorder(struct node *root)
     if (root == NULL)
         return;
     inorder(root->left);
-    printf("%d\n", root->data);
+    printf("%d\t", root->data);
     inorder(root->right);
 }
 
@@ -90,7 +90,7 @@ void preorder(struct node *root)
 {
     if (root == NULL)
         return;
-    printf("%d\n", root->data);
+    printf("%d\t", root->data);
     preorder(root->left);
     preorder(root->right);
 }
@@ -101,7 +101,7 @@ void postorder(struct node *root)
         return;
     postorder(root->left);
     postorder(root->right);
-    printf("%d\n", root->data);
+    printf("%d\t", root->data);
 }
 
 int main()
@@ -109,7 +109,7 @@ int main()
     while (1)
     {
         int choice;
-        printf("1. Create\n2. Inorder\n3. Preorder\n4. Postorder \n5.Exit\n");
+        printf("\n1. Create\n2. Inorder\n3. Preorder\n4. Postorder \n5.Exit\n");
         scanf("%d", &choice);
         switch (choice)
         {
