@@ -6,46 +6,62 @@ def create_account():
     user_details = {
         "Acc_no": "",
         "user_name": "",
-        "balance": 0
+        "balance": 0,
+        "password":""
     }
     for i in range(10):
         n = str(random.randint(1,9))
         user_details["Acc_no"] += n
     user_details["user_name"] = input("Enter your name: ")
     user_details["balance"] = float(input("Enter your initial balance: "))
+    print("Create a password for your account")
+    user_details["password"] = input("Enter your password: ")
     bank_details.append(user_details)
     print("Account created successfully! Your account number is", user_details["Acc_no"])
     print("Please save your account number for further use")
 
 def deposit():
     acc_no = input("Enter your account number: ")
+    password =input("Enter your password")
     for user in bank_details:
         if user["Acc_no"] == acc_no:
-            amount = float(input("Enter amount to deposit: "))
-            user["balance"] = user["balance"] + amount
-            print("Deposit successful! Your new balance is", user["balance"])
-            return
-    print("Account not found!")
+            if user["password"] == password:
+                amount = float(input("Enter amount to deposit: "))
+                user["balance"] = user["balance"] + amount
+                print("Deposit successful! Your new balance is", user["balance"])
+                return
+            else:
+                print("Wrong password")
+        else:
+            print("Account not found!")
 
 def withdraw():
     acc_no = input("Enter your account number: ")
+    password =input("Enter your password")
     for user in bank_details:
         if user["Acc_no"] == acc_no:
-            amount = float(input("Enter amount to withdraw: "))
-            if user["balance"] >= amount:
-                user["balance"] = user["balance"]-amount
-                print(f"Successfully withdraw of {amount} from {acc_no}\n")
-                print(f"Your current balance is {user["balance"]}")
+            if user["password"] == password:
+                amount = float(input("Enter amount to withdraw: "))
+                if user["balance"] >= amount:
+                    user["balance"] = user["balance"]-amount
+                    print(f"Successfully withdraw of {amount} from {acc_no}\n")
+                    print(f"Your current balance is {user["balance"]}")
+                else:
+                    print(f"balance Insufficient ")
             else:
-                print(f"balance Insufficient ")
+                print("Wrong password")
         else:
             print("Invalid account number")
 
 def check_balance():
     acc_no = input("Enter your account number: ")
+    password =input("Enter your password")
     for user in bank_details:
         if user["Acc_no"] == acc_no:
-            print(f"your current balance is {user["balance"]}")
+            if user["password"] == password:
+                print(f"your current balance is {user["balance"]}")
+            else:
+                print("Wrong password")
         else:
             print("invalid acc number")
 

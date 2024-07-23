@@ -25,7 +25,7 @@ int main()
     char exp[20];
     char *e;
     int n1, n2, n3, num;
-    printf("Enter the expression\n");
+    printf("Enter the expression\n")                                                                                                                                                           ;
     scanf("%s", &exp);
     e = exp;
     while (*e != '\0')
