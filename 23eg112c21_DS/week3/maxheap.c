@@ -30,7 +30,7 @@ int *buildheap(int a[], int n)
 {
     int heapsize = n;
     int j;
-    for (j = n / 2 - 1; j >= 0; j--)
+    for (j = n / 2; j >= 0; j--)
     {
         maxheapify(a, j, heapsize);
     }
