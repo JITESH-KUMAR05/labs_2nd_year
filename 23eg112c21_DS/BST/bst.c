@@ -28,7 +28,6 @@ int main()
     inorder(root);
     return 0;
 }
-
 struct node *create(){
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     int data;
@@ -38,7 +37,6 @@ struct node *create(){
     newnode->data = data;
     return newnode;
 }
-
 void insert(struct node *root , struct node * newnode){
     if(newnode->data < root->data){
         if(root->left != NULL)
@@ -54,7 +52,6 @@ void insert(struct node *root , struct node * newnode){
 
     }
 }
-
 void inorder(struct node *root){
     if(root != NULL){
         inorder(root->left);
