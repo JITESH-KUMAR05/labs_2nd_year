@@ -11,6 +11,7 @@ void insert(struct node * , struct node *);
 void inorder(struct node *);
 struct node *delete(struct node*  , int);
 struct node *findmin(struct node *);
+int search(struct node * , int);
 int main()
 {
     char ch;
@@ -28,6 +29,7 @@ int main()
     }while(ch =='y' || ch == 'Y');
     printf("\nInorder Traversal\n");
     inorder(root);
+    printf("\n");
     // deletion
     do
     {
@@ -45,6 +47,24 @@ int main()
     } while (ch == 'y' || ch == 'Y');
     printf("\nInorder Traversal After Deletion\n");
     inorder(root);
+    printf("\n");
+
+    printf("Searching \n");
+
+    do
+    {
+        if(root == NULL){
+            printf("The Tree is empty\n");
+            return;
+        }
+        else{
+            int data;
+            printf("Enter the element to search\n");
+            scanf("%d",&data);
+            search(root , data);
+        }
+
+    } while (ch == 'y' || ch == 'Y');
     
     return 0;
 }
@@ -78,6 +98,7 @@ void inorder(struct node *root){
         printf("%d\t",root->data);
         inorder(root->right);
     }
+    
 }
 
 struct node * delete(struct node * root , int data){
@@ -112,3 +133,25 @@ struct node * findmin(struct node *root){
        root = root->left;
        return root;
        }
+
+int search(struct node *root , int data){
+    if(root == NULL){
+        printf("The Tree is empty \n");
+        return 0;
+    }
+    else{
+        if(data == root->data){
+            printf("The data is found \n");
+        }
+        else if(data < root->data){
+            search(root->left , data);
+        }
+        else if(data > root->data){
+            search(root->right , data);
+        }
+        else{
+            printf("The data is not found \n");
+        }
+    }
+    return 0;
+}
