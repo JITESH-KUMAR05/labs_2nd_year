@@ -135,13 +135,12 @@ struct node * findmin(struct node *root){
        }
 
 int search(struct node *root , int data){
-    if(root == NULL){
-        printf("The Tree is empty \n");
-        return 0;
-    }
-    else{
-        if(data == root->data){
+    
+    
+        while(root != NULL){
+        	if(data == root->data){
             printf("The data is found \n");
+            return 1;
         }
         else if(data < root->data){
             search(root->left , data);
@@ -151,7 +150,9 @@ int search(struct node *root , int data){
         }
         else{
             printf("The data is not found \n");
+            return 0;
         }
-    }
-    return 0;
+		}
+    
+    
 }
