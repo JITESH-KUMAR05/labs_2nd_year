@@ -46,9 +46,10 @@ void display(){
     printf("NULL\n");
 }
 
-void main(){
+int main(){
     create();
     create();
     create();
     display();
+    return 0;
 }
