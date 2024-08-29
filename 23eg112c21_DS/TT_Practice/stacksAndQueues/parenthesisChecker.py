@@ -18,6 +18,6 @@ def check_parentheses(expression):
         else:
             print("Unbalanced")
 
-# Example usage
+
 expression = input("Enter your Expression: ")
 check_parentheses(expression)

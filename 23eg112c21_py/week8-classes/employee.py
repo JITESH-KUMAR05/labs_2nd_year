@@ -2,15 +2,15 @@ class employee:
     def __init__(self, name, salary, join_year):
         self.name = name
         self.salary = salary
-        self.join_year = join_year
+        self.year = join_year
 
     def display(self):
         print("Name: ", self.name)
         print("Salary: ", self.salary)
-        print("Join Year: ", self.join_year)
+        print("Join Year: ", self.year)
     
     def calc_expperience(self):
-        exp =  2024 - self.join_year
+        exp =  2024 - self.year
         print("Experience: ", exp)
 
 Rahul = employee("Rahul", 50000, 2019)
