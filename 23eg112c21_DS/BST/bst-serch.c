@@ -16,7 +16,6 @@ int main()
 {
     char ch;
     struct node *root = NULL , *newnode;
-
     do{
         newnode = create();
         if(root == NULL)
@@ -133,10 +132,7 @@ struct node * findmin(struct node *root){
        root = root->left;
        return root;
        }
-
 int search(struct node *root , int data){
-    
-    
         while(root != NULL){
         	if(data == root->data){
             printf("The data is found \n");
@@ -153,6 +149,4 @@ int search(struct node *root , int data){
             return 0;
         }
 		}
-    
-    
 }
