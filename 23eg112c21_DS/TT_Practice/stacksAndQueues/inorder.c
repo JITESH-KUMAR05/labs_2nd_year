@@ -65,11 +65,10 @@ int evensum(struct node *ro){
     }
     else{
         if(ro->data %2 == 0){
-            // s += 
-
-
+            s +=  ro->data;
         }
     }
+    return s;
 }
 
 int main(){
@@ -89,5 +88,8 @@ int main(){
     // printf("%d",s);
     printf("\n");
     printf("%d",sum(root));
+    printf("\n");
+    printf("%d",evensum(root));
+    
     return 0;
 }

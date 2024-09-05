@@ -29,7 +29,6 @@ int main()
     printf("\nInorder Traversal\n");
     inorder(root);
     printf("\n");
-    // deletion
     do
     {
         if(root == NULL){
@@ -42,7 +41,6 @@ int main()
             scanf("%d",&data);
             root = delete(root , data);
         }
-
     } while (ch == 'y' || ch == 'Y');
     printf("\nInorder Traversal After Deletion\n");
     inorder(root);
