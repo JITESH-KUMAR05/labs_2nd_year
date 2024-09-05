@@ -1,13 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 struct node
 {
     int data;
     struct node *left;
     struct node *right;
 };
-
 struct node *createNode(int data)
 {
     struct node *newNode = (struct node *)malloc(sizeof(struct node));
@@ -16,10 +14,7 @@ struct node *createNode(int data)
     newNode->right = NULL;
     return newNode;
 }
-
 void insert(struct node *root , struct node *newNode){
-    
-    
         if(newNode->data < root->data){
             if(root->left == NULL){
                 root->left = newNode;
@@ -38,9 +33,6 @@ void insert(struct node *root , struct node *newNode){
             }
         }
     }
-
-
-
 int main(){
     int n;
     struct node *root = NULL;
@@ -57,6 +49,7 @@ int main(){
         else{
             insert(root,newNode);
         }
+        printf("Do you want to insert more nodes? (y/n): ");
+        scanf(" %c",&ch);
     } while (ch == 'y' || ch == 'Y');
-    
 }
