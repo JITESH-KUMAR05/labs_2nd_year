@@ -15,3 +15,4 @@ struct node *create(int data){
     return newnode;
 }
 
+void insert(struct node )
