@@ -16,10 +16,15 @@ int search(struct node *, int);
 int main()
 {
     char ch;
+<<<<<<< HEAD
     struct node *root = NULL, *newnode;
 
     do
     {
+=======
+    struct node *root = NULL , *newnode;
+    do{
+>>>>>>> 56263702eb62a4b22b0ee37867569e0ee5cf8b14
         newnode = create();
         if (root == NULL)
             root = newnode;
@@ -32,7 +37,6 @@ int main()
     printf("\nInorder Traversal\n");
     inorder(root);
     printf("\n");
-    // deletion
     do
     {
         if (root == NULL)
@@ -47,7 +51,6 @@ int main()
             scanf("%d", &data);
             root = delete (root, data);
         }
-
     } while (ch == 'y' || ch == 'Y');
     printf("\nInorder Traversal After Deletion\n");
     inorder(root);
@@ -128,6 +131,7 @@ struct node *delete(struct node *root, int data)
             root = root->right;
             free(temp);
             return root;
+<<<<<<< HEAD
         }
         else if (root->right == NULL)
         {
@@ -156,6 +160,17 @@ int search(struct node *root, int data)
     {
         if (data == root->data)
         {
+=======
+            }
+struct node * findmin(struct node *root){
+       while(root->left != NULL)
+       root = root->left;
+       return root;
+       }
+int search(struct node *root , int data){
+        while(root != NULL){
+        	if(data == root->data){
+>>>>>>> 56263702eb62a4b22b0ee37867569e0ee5cf8b14
             printf("The data is found \n");
             return 1;
         }
@@ -173,5 +188,11 @@ int search(struct node *root, int data)
         
             printf("The data is not found \n");
             return 0;
+<<<<<<< HEAD
         
 }
+=======
+        }
+		}
+}
+>>>>>>> 56263702eb62a4b22b0ee37867569e0ee5cf8b14
