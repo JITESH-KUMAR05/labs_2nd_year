@@ -2,9 +2,6 @@ from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
 import os
 
-
-
-
 def get_database(db_name):
      # Hardcoded for demonstration; consider using environment variables
     CONNECTION_STRING = f"mongodb://localhost:27017/"
@@ -38,7 +35,15 @@ item_2 = {
   "category" : "food",
   "quantity" : 12,
   "price" : 36,
-  "item_description" : "brown country eggs"
+  "item_description" : "brown country eggs jo vineel ko khane he"
+}
+item_3 = {
+  "_id" : "U1IT00003",
+  "item_name" : "Aanda",
+  "category" : "food",
+  "quantity" : 12,
+  "price" : 36,
+  "item_description" : "brown country eggs jo vineel ko khane he"
 }
 # This is added so that many files can reuse the function get_database()
 if __name__ == "__main__":
@@ -48,4 +53,7 @@ if __name__ == "__main__":
     # Get the database
     dbname = get_database(db_name)
     collection_name = dbname["user_1_detail"]
-    collection_name.insert_many([item_1,item_2])
+    collection_name.insert_many([item_1])
+    collection_name.insert_many([item_3])
+
+    
