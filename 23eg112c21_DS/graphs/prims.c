@@ -36,7 +36,7 @@ void prims(int num){
 }
 int main(){
     int num,i,j;
-    printf("Enter the number of edges: ");
+    printf("Enter the number of vercices: ");
     scanf("%d",&num);
     printf("Enter the cost matrix: ");
     for(i = 1; i <= num; i++)
