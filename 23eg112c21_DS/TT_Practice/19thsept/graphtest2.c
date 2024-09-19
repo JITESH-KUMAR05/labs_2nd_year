@@ -6,7 +6,7 @@ int t=-1,h[1000]={0},g[5][5]={
     {9,3,0,2,5},
     {11,0,2,0,0},
     {0,4,5,0,0}}
-    ,i,j,vist[5],v[5]={10,5,3,4,7};
+    ,i,j,vist[5],v[5]={10,5,3,4,7},s = 0 ,small = 0;
 int DFS(int x,int i)
 {
 	int j;
@@ -22,6 +22,11 @@ int DFS(int x,int i)
         }
         printf("\n");
         t--;
+        printf("Sum: %d\n", s);
+        if(small == 0 || s < small)
+        {
+            small = s;
+        }
         h[x]=0;
         return 0;
     }
@@ -29,7 +34,9 @@ int DFS(int x,int i)
 	{
 		if(g[i][j]!=0 && h[v[j]]==0)
 		{
+            s += g[i][j];
 			DFS(v[j],j);
+            s -= g[i][j];
 		}
 	}
     t--;
@@ -39,4 +46,5 @@ int DFS(int x,int i)
 int main()
 {
 	DFS(10,0);
+    printf("Smallest: %d\n", small);
 }

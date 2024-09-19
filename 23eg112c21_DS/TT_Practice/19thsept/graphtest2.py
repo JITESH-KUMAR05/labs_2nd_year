@@ -7,16 +7,19 @@ g = [
     [0,4,5,0,0]]
 t = 0
 vis = []
+summ = 0
+small = 0
+
 
 def dfs(x,i):
-    # global t
     vis.append(x)
-    # t += 1
-    # print(x)
     if x == 7:
         for i in range(len(vis)):
             print(f"{vis[i]}->",end=" ")
         print("\n")
+        print(summ)
+        if small == 0 or summ < small:
+            small = summ
         vis.pop()
         
         return 0
@@ -24,8 +27,9 @@ def dfs(x,i):
     for j in range(0,5):
         if g[i][j] != 0:
             if v[j] not in vis:
+                summ += g[i][j]
                 dfs(v[j],j)
-    # vis[t-1] = None
-    # t -= 1
+                summ -= g[i][j]
     vis.pop()
 dfs(10,0)
+print(small)
