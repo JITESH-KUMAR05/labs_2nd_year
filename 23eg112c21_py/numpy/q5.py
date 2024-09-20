@@ -1,0 +1,16 @@
+import numpy as np
+
+m = np.random.randint(1,10,size=(6,6))
+print(m)
+print("Sum of all elements in the matrix is: ", np.sum(m))
+print("mean of all elements in the matrix is: ", np.mean(m))
+print("Standard deviation of all elements in the matrix is: ", np.std(m))
+print("Variance of all elements in the matrix is: ", np.var(m))
+print("Maximum value in the matrix is: ", np.max(m))
+print("Minimum value in the matrix is: ", np.min(m))
+print("Row wise sum of matrix is: ", np.sum(m, axis=1))
+print("Column wise sum of matrix is: ", np.sum(m, axis=0))
+print("Row wise mean of matrix is: ", np.mean(m, axis=1))
+print("Column wise mean of matrix is: ", np.mean(m, axis=0))
+print("standard deviation of matrix is: ", np.std(m))
+print("Row wise standard deviation of matrix is: ", np.std(m, axis=1))
