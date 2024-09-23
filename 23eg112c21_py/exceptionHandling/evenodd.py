@@ -7,6 +7,8 @@ def evenOdd(n):
             print("Odd")
     except ValueError:
         print("Invalid input given")
+    finally:
+        print("Program execution completed")
 
 n = input("Enter a number: ")
 evenOdd(n)
