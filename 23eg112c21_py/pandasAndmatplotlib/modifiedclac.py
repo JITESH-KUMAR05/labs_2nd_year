@@ -76,8 +76,12 @@ options.pack()
 
 # Create a frame for the buttons
 button_frame = tk.Frame(root)
-button_frame.pack(side=tk.BOTTOM)
-button_frame.config(width=500, height=100)
+button_frame.pack(fill=tk.BOTH, expand=True)
+
+# Configure the grid layout to have 4 columns and make them expand equally
+for i in range(4):
+    button_frame.columnconfigure(i, weight=1)
+    button_frame.rowconfigure(i, weight=1)
 
 # Add buttons to the frame in a 4x4 grid layout
 button1 = tk.Button(button_frame, text="Add", command=add)
