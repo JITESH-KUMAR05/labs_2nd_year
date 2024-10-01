@@ -79,29 +79,34 @@ label3.pack()
 options = tk.OptionMenu(root, operation, "+", "-", "*", "/")
 options.pack()
 
-button1 = tk.Button(root,text="Add",command=add)
-button1.pack()
+# Create a frame for the buttons
+button_frame = tk.Frame(root)
+button_frame.pack(side=tk.BOTTOM)
 
-button2 = tk.Button(root,text="Subtract",command=subtract)
-button2.pack()
+# Add buttons to the frame in a 4x4 grid layout
+button1 = tk.Button(button_frame, text="Add", command=add)
+button1.grid(row=0, column=0)
 
-button3 = tk.Button(root,text="Multiply",command=multiply)
-button3.pack()
+button2 = tk.Button(button_frame, text="Subtract", command=subtract)
+button2.grid(row=0, column=1)
 
-button4 = tk.Button(root,text="Divide",command=divide)
-button4.pack()
+button3 = tk.Button(button_frame, text="Multiply", command=multiply)
+button3.grid(row=0, column=2)
 
-button5 = tk.Button(root,text="Clear",command=clear)
-button5.pack()
+button4 = tk.Button(button_frame, text="Divide", command=divide)
+button4.grid(row=0, column=3)
 
-button6 = tk.Button(root,text="Delete",command=delete)
-button6.pack()
+button5 = tk.Button(button_frame, text="Clear", command=clear)
+button5.grid(row=1, column=0)
 
-button7 = tk.Button(root,text="Decimal",command=decimal)
-button7.pack()
+button6 = tk.Button(button_frame, text="Delete", command=delete)
+button6.grid(row=1, column=1)
 
-button8 = tk.Button(root,text="Equals",command=equals)
-button8.pack()
+button7 = tk.Button(button_frame, text="Decimal", command=decimal)
+button7.grid(row=1, column=2)
+
+button8 = tk.Button(button_frame, text="Equals", command=equals)
+button8.grid(row=1, column=3)
 
 label_result = tk.Label(root,text="Result: ")
 label_result.pack()
