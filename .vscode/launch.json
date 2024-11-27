@@ -2,6 +2,34 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "amstrong",
+      "request": "launch",
+      "mainClass": "amstrong",
+      "projectName": "labs_2nd_year_4a2589ab"
+    },
+    {
+      "type": "java",
+      "name": "palindrome",
+      "request": "launch",
+      "mainClass": "palindrome",
+      "projectName": "labs_2nd_year_4a2589ab"
+    },
+    {
+      "type": "java",
+      "name": "mirror_triangle",
+      "request": "launch",
+      "mainClass": "mirror_triangle",
+      "projectName": "labs_2nd_year_4a2589ab"
+    },
+    {
+      "type": "java",
+      "name": "Pattern",
+      "request": "launch",
+      "mainClass": "Pattern",
+      "projectName": "labs_2nd_year_4a2589ab"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
