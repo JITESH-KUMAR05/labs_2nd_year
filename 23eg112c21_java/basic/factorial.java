@@ -8,6 +8,5 @@ public class factorial {
         }
         System.err.println("Factorial of "+n+" is "+f);
     }
-
     
 }
