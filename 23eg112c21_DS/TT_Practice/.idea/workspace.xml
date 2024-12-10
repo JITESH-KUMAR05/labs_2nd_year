@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3df8d405-7f25-407c-963c-ac68dec310c3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DoublyLinkedList/dll.c" beforeDir="false" afterPath="$PROJECT_DIR$/DoublyLinkedList/dll.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Technical Training 2-2/character_separation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Technical Training 2-2/rev_spe_st_efficient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Technical Training 2-2/reverse_special_string.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Technical Training 2-2/reverse_special_string.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +14,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2l04bjdhbCdyIGPcMp0VhUlxoXZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/second year clg/labs_2nd_year/23eg112c21_DS/TT_Practice",
+    "last_opened_file_path": "D:/java programing",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,6 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724303733595</updated>
       <workItem from="1724303734643" duration="78000" />
+      <workItem from="1733840483593" duration="72000" />
     </task>
     <servers />
   </component>

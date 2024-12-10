@@ -1,3 +1,7 @@
+# this code is giving the output but this is not the efficient way of solving this problem
+# as i have used some unwanted variables as well
+
+
 st = "ap$pl#e@s"
 duml = list(st)
 newst = []
@@ -16,8 +20,9 @@ for i in range(len(duml)):
         if i == j:
             newst.insert(j,duml[i])
 # finalst = str(newst)
+# finalst = ""
 # for i in newst:
-#     finalst.join(i)
+#     finalst + i
 finalst = "".join(newst)
 print(duml)
 print(newst)
