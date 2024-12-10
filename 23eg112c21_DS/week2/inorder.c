@@ -2,9 +2,9 @@
 #include<stdlib.h>
 struct*Node 
 {
-	create node*root;
-	create node*left;
-	create node*right;
+	create node *root;
+	create node *left;
+	create node *right;
 };
 
 	struct Node*new Node=create Node*malloc(sizeof(struct Node))

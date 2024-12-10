@@ -11,7 +11,7 @@ void main()
     int i, t, n;
     int *a = calloc(MAX, sizeof(int));
     int *m = calloc(MAX, sizeof(int));
-    prin                                                                              tf("Enter the number of elements in the array\n");
+    printf("Enter no of elements: ");                                                                      tf("Enter the number of elements in the array\n");
     scanf("%d", &n);
     printf("Enter the elements of the array\n");
     for (i = 0; i < n; i++)
