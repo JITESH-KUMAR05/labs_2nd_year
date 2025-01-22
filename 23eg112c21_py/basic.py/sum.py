@@ -1,4 +1,7 @@
-sum = 0
-for i in range(10):
-    sum = sum+i
-print(sum)
+# factorial of a number 
+num = int(input("Enter a number: "))
+fac = 1
+while num > 1:
+    fac *= num
+    num -= 1
+print(fac)
