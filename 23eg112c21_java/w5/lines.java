@@ -1,19 +1,28 @@
-
-
-public class interfacesillus {
-    public static void main(String [] args){
-
-    }
-    
-}
-
-public class lines{
-    public void draw(){
-        System.out.println("Drawing lines");
+public class interfacesillu {
+    public static void main(String[] args) {
+        allLines l1 = new allLines();
+        l1.drawline();
+        l1.draw();
+        l1.drawdotted();
     }
 }
-public interface dottedlines {
-    public void draw();
-    
+
+public class lines {
+    void draw() {
+        System.out.println("draw lines");
+    }
 }
-public class
+
+interface dottedlines {
+    void drawdotted();
+}
+
+class allLines extends lines implements dottedlines {
+    public void drawline() {
+        System.out.println("All Lines drawing");
+    }
+
+    public void drawdotted() {
+        System.out.println("dotted lines");
+    }
+}

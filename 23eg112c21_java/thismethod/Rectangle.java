@@ -1,3 +1,4 @@
+package thismethod;
 
 public class Rectangle {
     public double area(double l, double b){
