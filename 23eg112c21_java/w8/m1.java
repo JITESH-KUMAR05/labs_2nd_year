@@ -17,7 +17,7 @@ class table implements Runnable{
             System.out.println(n + "  X  " + i + "  =  " + n*i);
         }
     }
-[]
+}
 public class m1{
     public static void main(String[] args) {
         System.out.println("Extending the Thread class");
