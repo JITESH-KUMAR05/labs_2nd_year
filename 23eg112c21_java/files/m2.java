@@ -6,10 +6,19 @@ public class m2 {
         try {
             source = new FileInputStream("file1.txt");
             target = new FileOutputStream("file2.txt");
-            char temp;
-            while((temp = source.read(null)))
+            int temp;
+            while((temp = source.read()) != -1) {
+                target.write(temp);
+            }
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
+        } finally {
+            try {
+                if (source != null) source.close();
+                if (target != null) target.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     
